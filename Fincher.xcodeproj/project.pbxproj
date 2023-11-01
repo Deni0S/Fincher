@@ -14,6 +14,13 @@
 		924669B02ADDB6F000C2A238 /* FincherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924669AF2ADDB6F000C2A238 /* FincherTests.swift */; };
 		924669BA2ADDB6F000C2A238 /* FincherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924669B92ADDB6F000C2A238 /* FincherUITests.swift */; };
 		924669BC2ADDB6F000C2A238 /* FincherUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924669BB2ADDB6F000C2A238 /* FincherUITestsLaunchTests.swift */; };
+		9297379B2B06759400D8337B /* DetailsScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929737962B06759400D8337B /* DetailsScreenCell.swift */; };
+		9297379C2B06759400D8337B /* DetailsScreenViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929737972B06759400D8337B /* DetailsScreenViewData.swift */; };
+		9297379D2B06759400D8337B /* DetailsScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929737982B06759400D8337B /* DetailsScreenViewModel.swift */; };
+		9297379E2B06759400D8337B /* DetailsScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929737992B06759400D8337B /* DetailsScreenAssembly.swift */; };
+		9297379F2B06759400D8337B /* DetailsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9297379A2B06759400D8337B /* DetailsScreenViewController.swift */; };
+		929737A22B0675CB00D8337B /* CreditMonthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929737A02B0675CB00D8337B /* CreditMonthData.swift */; };
+		929737A32B0675CB00D8337B /* InvestMonthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929737A12B0675CB00D8337B /* InvestMonthData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +52,13 @@
 		924669B52ADDB6F000C2A238 /* FincherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FincherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		924669B92ADDB6F000C2A238 /* FincherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FincherUITests.swift; sourceTree = "<group>"; };
 		924669BB2ADDB6F000C2A238 /* FincherUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FincherUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		929737962B06759400D8337B /* DetailsScreenCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsScreenCell.swift; sourceTree = "<group>"; };
+		929737972B06759400D8337B /* DetailsScreenViewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsScreenViewData.swift; sourceTree = "<group>"; };
+		929737982B06759400D8337B /* DetailsScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsScreenViewModel.swift; sourceTree = "<group>"; };
+		929737992B06759400D8337B /* DetailsScreenAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsScreenAssembly.swift; sourceTree = "<group>"; };
+		9297379A2B06759400D8337B /* DetailsScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsScreenViewController.swift; sourceTree = "<group>"; };
+		929737A02B0675CB00D8337B /* CreditMonthData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditMonthData.swift; sourceTree = "<group>"; };
+		929737A12B0675CB00D8337B /* InvestMonthData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvestMonthData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +141,6 @@
 				9246699A2ADDB6EE00C2A238 /* SceneDelegate.swift */,
 				924669CF2ADDC55600C2A238 /* BusinessLogic */,
 				924669CE2ADDC54C00C2A238 /* Entity */,
-				924669CD2ADDC53E00C2A238 /* Assembly */,
 				924669CC2ADDC52900C2A238 /* Flows */,
 			);
 			path = App;
@@ -161,20 +174,16 @@
 		924669CC2ADDC52900C2A238 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				929737952B06759400D8337B /* DetailsScreen */,
 			);
 			path = Flows;
-			sourceTree = "<group>";
-		};
-		924669CD2ADDC53E00C2A238 /* Assembly */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Assembly;
 			sourceTree = "<group>";
 		};
 		924669CE2ADDC54C00C2A238 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				929737A02B0675CB00D8337B /* CreditMonthData.swift */,
+				929737A12B0675CB00D8337B /* InvestMonthData.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -191,6 +200,18 @@
 			children = (
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		929737952B06759400D8337B /* DetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				929737992B06759400D8337B /* DetailsScreenAssembly.swift */,
+				9297379A2B06759400D8337B /* DetailsScreenViewController.swift */,
+				929737982B06759400D8337B /* DetailsScreenViewModel.swift */,
+				929737972B06759400D8337B /* DetailsScreenViewData.swift */,
+				929737962B06759400D8337B /* DetailsScreenCell.swift */,
+			);
+			path = DetailsScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,8 +344,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9297379D2B06759400D8337B /* DetailsScreenViewModel.swift in Sources */,
+				9297379F2B06759400D8337B /* DetailsScreenViewController.swift in Sources */,
+				9297379B2B06759400D8337B /* DetailsScreenCell.swift in Sources */,
+				929737A22B0675CB00D8337B /* CreditMonthData.swift in Sources */,
+				9297379C2B06759400D8337B /* DetailsScreenViewData.swift in Sources */,
 				924669992ADDB6EE00C2A238 /* AppDelegate.swift in Sources */,
+				9297379E2B06759400D8337B /* DetailsScreenAssembly.swift in Sources */,
 				9246699B2ADDB6EE00C2A238 /* SceneDelegate.swift in Sources */,
+				929737A32B0675CB00D8337B /* InvestMonthData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
