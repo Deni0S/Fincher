@@ -8,6 +8,7 @@ final class DetailsScreenCell: UITableViewCell {
     private let renewalLabel = UILabel()
     private let contribLabel = UILabel()
     private let generalLabel = UILabel()
+    private let overpaymentLabel = UILabel()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -31,6 +32,7 @@ final class DetailsScreenCell: UITableViewCell {
         renewalLabel.text = item.renewal
         contribLabel.text = item.contrib
         generalLabel.text = item.general
+        overpaymentLabel.text = item.overpayment
     }
 }
 
@@ -43,7 +45,8 @@ private extension DetailsScreenCell {
             percentLabel,
             renewalLabel,
             contribLabel,
-            generalLabel
+            generalLabel,
+            overpaymentLabel
         ])
 
         backgroundColor = .systemBackground
@@ -72,7 +75,9 @@ private extension DetailsScreenCell {
                 percentLabel,
                 renewalLabel,
                 contribLabel]),
-            generalLabel
+            hStack([
+                generalLabel,
+                overpaymentLabel])
         ])
     }
 

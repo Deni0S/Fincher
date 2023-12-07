@@ -23,6 +23,13 @@ class MainViewController: UIViewController {
         return btn
     }()
 
+    let btnDetails: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.frame = CGRect(x: 100, y: 100, width: 100, height: 50)
+        btn.setTitle("График платежей", for: .normal)
+        return btn
+    }()
+
     var subscriptions = Set<AnyCancellable>()
     private let tagHandlerPublisher = PassthroughSubject<Int, Never>()
     var selectedTag: Int = 0
@@ -86,13 +93,14 @@ class MainViewController: UIViewController {
         stackView.axis = .vertical
         stackView.alignment = .top
         stackView.distribution = .fill
-        [   self.calculaionSV,
-            self.dropDownButton,
-            self.amountOfCreditSV,
-            self.creditTermSV,
-            self.interestRateSV,
-            radioView,
-            self.btnCalculate
+        [calculaionSV,
+         dropDownButton,
+         amountOfCreditSV,
+         creditTermSV,
+         interestRateSV,
+         radioView,
+         btnCalculate,
+         btnDetails
         ].forEach { stackView.addArrangedSubview($0) }
         return stackView
     }()
@@ -107,6 +115,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         btnCalculate.addTarget(self, action: #selector(btnPopUpCalculate), for: .touchUpInside)
+        btnDetails.addTarget(self, action: #selector(btnDetailsTap), for: .touchUpInside)
 
         tagHandlerPublisher.sink {[self] value in
             self.selectedTag = value
@@ -276,28 +285,48 @@ class MainViewController: UIViewController {
 
     @objc
     func btnPopUpCalculate(sender: UIButton) {
-        let assembly = DetailsScreenAssembly()
-        let data = assembly.mockData()
-        let controller = assembly.assemble(data)
-        controller.modalTransitionStyle = .crossDissolve
-        controller.modalPresentationStyle = .fullScreen
-        present(controller, animated: true)
-    }
-
-    func calculate() {
         if selectedCalculationOption == 0 {
             if selectedTag == 0 {
                 calculateAnnuitentPayments(viewModel.calculateAnnuitentPayments())
             } else {
                 calculateDiffPayments(viewModel.calculateDiffPayments())
             }
-        }
-        if selectedCalculationOption == 1 {
+        } else if selectedCalculationOption == 1 {
             calculateTermPayments(viewModel.calculateTermPayments())
-        }
-        if selectedCalculationOption == 2 {
+        } else if selectedCalculationOption == 2 {
             calculateMaxCredit(viewModel.calculateMaxCredit())
         }
+    }
+
+    @objc
+    func btnDetailsTap(sender: UIButton) {
+        let assembly = DetailsScreenAssembly()
+        let payments: DetailsScreenViewModel.Payments
+        if selectedCalculationOption == 0 {
+            if selectedTag == 0 {
+                payments = .annuitent(
+                    amount: Double(viewModel.amountOfCredit),
+                    payment: viewModel.monthlyPaymentA,
+                    term: Double(viewModel.termInMonth),
+                    monthRate: viewModel.pTax)
+            } else {
+                payments = .differentiated(
+                    amount: Double(viewModel.amountOfCredit),
+                    payment: viewModel.monthlyPaymentB,
+                    term: Double(viewModel.termInMonth),
+                    monthRate: viewModel.pTax)
+            }
+        } else if selectedCalculationOption == 1 {
+            payments = .term
+        } else if selectedCalculationOption == 2 {
+            payments = .amountMax
+        } else {
+            return
+        }
+        let controller = assembly.assemble(payments)
+        controller.modalTransitionStyle = .crossDissolve
+        controller.modalPresentationStyle = .fullScreen
+        present(controller, animated: true)
     }
 
     private func calculateAnnuitentPayments(_ payments: Double) {
@@ -360,31 +389,5 @@ class MainViewController: UIViewController {
         label.text = text
         label.textColor = .red
         return label
-    }
-}
-
-extension UITextView {
-    var textPublisher: AnyPublisher<Int, Never> {
-        NotificationCenter.default
-            .publisher(
-                for: UITextView.textDidChangeNotification,
-                object: self)
-            .compactMap { $0.object as? UITextView }
-            .map { $0.text ?? "" }
-            .map({ value in
-                Int(value) ?? 0
-            })
-            .eraseToAnyPublisher()
-    }
-
-    var doublePublisher: AnyPublisher<Double, Never> {
-        NotificationCenter.default
-            .publisher(for: UITextView.textDidChangeNotification, object: self)
-            .compactMap { $0.object as? UITextView }
-            .map { $0.text ?? "" }
-            .map({ value in
-                Double(value) ?? 0.0
-            })
-            .eraseToAnyPublisher()
     }
 }

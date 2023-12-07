@@ -24,13 +24,12 @@
 		3463C7542B0F9A30001033B3 /* CalculateOptionStackViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3463C7432B0F9A30001033B3 /* CalculateOptionStackViewBuilder.swift */; };
 		3463C7552B0F9A30001033B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3463C7442B0F9A30001033B3 /* SceneDelegate.swift */; };
 		3492596C2B18A02700FEB72D /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3492596B2B18A02700FEB72D /* .swiftlint.yml */; };
+		349259712B18F76A00FEB72D /* UITextView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349259702B18F76A00FEB72D /* UITextView + Ext.swift */; };
 		34B4732F2B0FA1F300BB9812 /* DetailsScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B4732A2B0FA1F300BB9812 /* DetailsScreenCell.swift */; };
 		34B473302B0FA1F300BB9812 /* DetailsScreenViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B4732B2B0FA1F300BB9812 /* DetailsScreenViewData.swift */; };
 		34B473312B0FA1F300BB9812 /* DetailsScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B4732C2B0FA1F300BB9812 /* DetailsScreenViewModel.swift */; };
 		34B473322B0FA1F300BB9812 /* DetailsScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B4732D2B0FA1F300BB9812 /* DetailsScreenAssembly.swift */; };
 		34B473332B0FA1F300BB9812 /* DetailsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B4732E2B0FA1F300BB9812 /* DetailsScreenViewController.swift */; };
-		34B473352B0FA20300BB9812 /* CreditMonthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B473342B0FA20200BB9812 /* CreditMonthData.swift */; };
-		34B473372B0FA21500BB9812 /* InvestMonthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B473362B0FA21500BB9812 /* InvestMonthData.swift */; };
 		51191BACE14E19FB23B73618 /* Pods_Fincher_FincherUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B34C4F0A82B8DF30B51ECCE7 /* Pods_Fincher_FincherUITests.framework */; };
 		924669B02ADDB6F000C2A238 /* FincherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924669AF2ADDB6F000C2A238 /* FincherTests.swift */; };
 		924669BA2ADDB6F000C2A238 /* FincherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924669B92ADDB6F000C2A238 /* FincherUITests.swift */; };
@@ -76,14 +75,13 @@
 		3463C7432B0F9A30001033B3 /* CalculateOptionStackViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateOptionStackViewBuilder.swift; sourceTree = "<group>"; };
 		3463C7442B0F9A30001033B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3492596B2B18A02700FEB72D /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
+		349259702B18F76A00FEB72D /* UITextView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView + Ext.swift"; sourceTree = "<group>"; };
 		34A5529620D6A61E2982F382 /* Pods_Fincher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fincher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B4732A2B0FA1F300BB9812 /* DetailsScreenCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsScreenCell.swift; sourceTree = "<group>"; };
 		34B4732B2B0FA1F300BB9812 /* DetailsScreenViewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsScreenViewData.swift; sourceTree = "<group>"; };
 		34B4732C2B0FA1F300BB9812 /* DetailsScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsScreenViewModel.swift; sourceTree = "<group>"; };
 		34B4732D2B0FA1F300BB9812 /* DetailsScreenAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsScreenAssembly.swift; sourceTree = "<group>"; };
 		34B4732E2B0FA1F300BB9812 /* DetailsScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsScreenViewController.swift; sourceTree = "<group>"; };
-		34B473342B0FA20200BB9812 /* CreditMonthData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditMonthData.swift; sourceTree = "<group>"; };
-		34B473362B0FA21500BB9812 /* InvestMonthData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvestMonthData.swift; sourceTree = "<group>"; };
 		565CD788E1A1642640FC08E0 /* Pods-Fincher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fincher.release.xcconfig"; path = "Target Support Files/Pods-Fincher/Pods-Fincher.release.xcconfig"; sourceTree = "<group>"; };
 		64396A8AC74A400ED8AC0C44 /* Pods-FincherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FincherTests.release.xcconfig"; path = "Target Support Files/Pods-FincherTests/Pods-FincherTests.release.xcconfig"; sourceTree = "<group>"; };
 		924669952ADDB6EE00C2A238 /* Fincher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fincher.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +150,7 @@
 		3463C72B2B0F9A30001033B3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				3492596F2B18F75B00FEB72D /* Extension */,
 				3463C72C2B0F9A30001033B3 /* Strings.swift */,
 			);
 			path = Core;
@@ -161,8 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				3463C72E2B0F9A30001033B3 /* Payments.swift */,
-				34B473342B0FA20200BB9812 /* CreditMonthData.swift */,
-				34B473362B0FA21500BB9812 /* InvestMonthData.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -217,6 +214,14 @@
 				3463C7412B0F9A30001033B3 /* InterestRateStackViewBuilder.swift */,
 			);
 			path = Assebly;
+			sourceTree = "<group>";
+		};
+		3492596F2B18F75B00FEB72D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				349259702B18F76A00FEB72D /* UITextView + Ext.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		34B473292B0FA1F300BB9812 /* DetailsScreen */ = {
@@ -587,6 +592,7 @@
 				3463C7542B0F9A30001033B3 /* CalculateOptionStackViewBuilder.swift in Sources */,
 				3463C74C2B0F9A30001033B3 /* AppDelegate.swift in Sources */,
 				34B4732F2B0FA1F300BB9812 /* DetailsScreenCell.swift in Sources */,
+				349259712B18F76A00FEB72D /* UITextView + Ext.swift in Sources */,
 				3463C7462B0F9A30001033B3 /* Payments.swift in Sources */,
 				3463C7522B0F9A30001033B3 /* InterestRateStackViewBuilder.swift in Sources */,
 				3463C74D2B0F9A30001033B3 /* DropDownButtonBuilder.swift in Sources */,
@@ -597,10 +603,8 @@
 				34B473312B0FA1F300BB9812 /* DetailsScreenViewModel.swift in Sources */,
 				3463C74E2B0F9A30001033B3 /* AmountOfCreditStackViewBuilder.swift in Sources */,
 				34B473322B0FA1F300BB9812 /* DetailsScreenAssembly.swift in Sources */,
-				34B473372B0FA21500BB9812 /* InvestMonthData.swift in Sources */,
 				3463C7452B0F9A30001033B3 /* Strings.swift in Sources */,
 				3463C7502B0F9A30001033B3 /* MainViewModel.swift in Sources */,
-				34B473352B0FA20300BB9812 /* CreditMonthData.swift in Sources */,
 				34B473332B0FA1F300BB9812 /* DetailsScreenViewController.swift in Sources */,
 				3463C7552B0F9A30001033B3 /* SceneDelegate.swift in Sources */,
 			);

@@ -6,4 +6,5 @@ struct DetailsScreenViewData {
     let renewal: String
     let contrib: String
     let general: String
+    let overpayment: String
 }
