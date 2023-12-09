@@ -1,7 +1,7 @@
 import Combine
 import UIKit
 
-extension UITextView {
+extension UITextView: UITextViewDelegate {
     var textPublisher: AnyPublisher<Int, Never> {
         NotificationCenter.default
             .publisher(

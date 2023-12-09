@@ -9,7 +9,7 @@ class Strings {
         "Loan term calculation", bundle: Bundle.main, comment: "Loan term calculation")
     let calcMlaString = NSLocalizedString(
         "Calculation of the mla", bundle: Bundle.main, comment: "Calculation of the mla")
-    let amountOfCreditString = NSLocalizedString(
+    let amountOfCredit = NSLocalizedString(
         "Amount of credit", bundle: Bundle.main, comment: "Amount of credit")
     let calcOptionsTipString = NSLocalizedString(
         "calcOptionTip", bundle: Bundle.main, comment: "Calculation Options Tip")
@@ -23,6 +23,8 @@ class Strings {
         "Credit Term", bundle: Bundle.main, comment: "Credit Term")
     let interestRateString = NSLocalizedString(
         "Interest Rate", bundle: Bundle.main, comment: "Interest Rate")
-    let monthlyPaymentString = NSLocalizedString(
+    let mPaymentStr = NSLocalizedString(
         "Monthly Payment", bundle: Bundle.main, comment: "Monthly Payment")
+    let interestChargesString = NSLocalizedString(
+        "interest charges", bundle: Bundle.main, comment: "interest charges")
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BEB5F842B24CF280041C8A0 /* MainViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEB5F832B24CF280041C8A0 /* MainViewController+Ext.swift */; };
+		1BEB5F862B24CFC20041C8A0 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEB5F852B24CFC20041C8A0 /* String+Ext.swift */; };
+		1BEB5F8A2B24F1650041C8A0 /* CalculateError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEB5F892B24F1650041C8A0 /* CalculateError.swift */; };
 		245BDA66D846C5BAC755C3AA /* Pods_FincherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D657E842A100FC60B4DD3071 /* Pods_FincherTests.framework */; };
 		3463C7452B0F9A30001033B3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3463C72C2B0F9A30001033B3 /* Strings.swift */; };
 		3463C7462B0F9A30001033B3 /* Payments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3463C72E2B0F9A30001033B3 /* Payments.swift */; };
@@ -24,7 +27,7 @@
 		3463C7542B0F9A30001033B3 /* CalculateOptionStackViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3463C7432B0F9A30001033B3 /* CalculateOptionStackViewBuilder.swift */; };
 		3463C7552B0F9A30001033B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3463C7442B0F9A30001033B3 /* SceneDelegate.swift */; };
 		3492596C2B18A02700FEB72D /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3492596B2B18A02700FEB72D /* .swiftlint.yml */; };
-		349259712B18F76A00FEB72D /* UITextView + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349259702B18F76A00FEB72D /* UITextView + Ext.swift */; };
+		349259712B18F76A00FEB72D /* UITextView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349259702B18F76A00FEB72D /* UITextView+Ext.swift */; };
 		34B4732F2B0FA1F300BB9812 /* DetailsScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B4732A2B0FA1F300BB9812 /* DetailsScreenCell.swift */; };
 		34B473302B0FA1F300BB9812 /* DetailsScreenViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B4732B2B0FA1F300BB9812 /* DetailsScreenViewData.swift */; };
 		34B473312B0FA1F300BB9812 /* DetailsScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B4732C2B0FA1F300BB9812 /* DetailsScreenViewModel.swift */; };
@@ -55,6 +58,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BEB5F832B24CF280041C8A0 /* MainViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Ext.swift"; sourceTree = "<group>"; };
+		1BEB5F852B24CFC20041C8A0 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		1BEB5F892B24F1650041C8A0 /* CalculateError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateError.swift; sourceTree = "<group>"; };
 		2A6D6232FB7AC4E430DA1A38 /* Pods-Fincher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fincher.debug.xcconfig"; path = "Target Support Files/Pods-Fincher/Pods-Fincher.debug.xcconfig"; sourceTree = "<group>"; };
 		32DB09BD8B4D417652BE1814 /* Pods-FincherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FincherTests.debug.xcconfig"; path = "Target Support Files/Pods-FincherTests/Pods-FincherTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3463C72C2B0F9A30001033B3 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -75,7 +81,7 @@
 		3463C7432B0F9A30001033B3 /* CalculateOptionStackViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateOptionStackViewBuilder.swift; sourceTree = "<group>"; };
 		3463C7442B0F9A30001033B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3492596B2B18A02700FEB72D /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
-		349259702B18F76A00FEB72D /* UITextView + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView + Ext.swift"; sourceTree = "<group>"; };
+		349259702B18F76A00FEB72D /* UITextView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Ext.swift"; sourceTree = "<group>"; };
 		34A5529620D6A61E2982F382 /* Pods_Fincher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fincher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B4732A2B0FA1F300BB9812 /* DetailsScreenCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsScreenCell.swift; sourceTree = "<group>"; };
 		34B4732B2B0FA1F300BB9812 /* DetailsScreenViewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsScreenViewData.swift; sourceTree = "<group>"; };
@@ -152,6 +158,7 @@
 			children = (
 				3492596F2B18F75B00FEB72D /* Extension */,
 				3463C72C2B0F9A30001033B3 /* Strings.swift */,
+				1BEB5F892B24F1650041C8A0 /* CalculateError.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -219,7 +226,9 @@
 		3492596F2B18F75B00FEB72D /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				349259702B18F76A00FEB72D /* UITextView + Ext.swift */,
+				349259702B18F76A00FEB72D /* UITextView+Ext.swift */,
+				1BEB5F832B24CF280041C8A0 /* MainViewController+Ext.swift */,
+				1BEB5F852B24CFC20041C8A0 /* String+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -592,7 +601,7 @@
 				3463C7542B0F9A30001033B3 /* CalculateOptionStackViewBuilder.swift in Sources */,
 				3463C74C2B0F9A30001033B3 /* AppDelegate.swift in Sources */,
 				34B4732F2B0FA1F300BB9812 /* DetailsScreenCell.swift in Sources */,
-				349259712B18F76A00FEB72D /* UITextView + Ext.swift in Sources */,
+				349259712B18F76A00FEB72D /* UITextView+Ext.swift in Sources */,
 				3463C7462B0F9A30001033B3 /* Payments.swift in Sources */,
 				3463C7522B0F9A30001033B3 /* InterestRateStackViewBuilder.swift in Sources */,
 				3463C74D2B0F9A30001033B3 /* DropDownButtonBuilder.swift in Sources */,
@@ -602,10 +611,13 @@
 				34B473302B0FA1F300BB9812 /* DetailsScreenViewData.swift in Sources */,
 				34B473312B0FA1F300BB9812 /* DetailsScreenViewModel.swift in Sources */,
 				3463C74E2B0F9A30001033B3 /* AmountOfCreditStackViewBuilder.swift in Sources */,
+				1BEB5F8A2B24F1650041C8A0 /* CalculateError.swift in Sources */,
 				34B473322B0FA1F300BB9812 /* DetailsScreenAssembly.swift in Sources */,
 				3463C7452B0F9A30001033B3 /* Strings.swift in Sources */,
 				3463C7502B0F9A30001033B3 /* MainViewModel.swift in Sources */,
+				1BEB5F842B24CF280041C8A0 /* MainViewController+Ext.swift in Sources */,
 				34B473332B0FA1F300BB9812 /* DetailsScreenViewController.swift in Sources */,
+				1BEB5F862B24CFC20041C8A0 /* String+Ext.swift in Sources */,
 				3463C7552B0F9A30001033B3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
