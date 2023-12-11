@@ -259,8 +259,8 @@ class MainViewController: UIViewController {
             print("no amount of credit")
         } catch CalculateError.noInterestRate {
             print("no interest rate")
-        } catch CalculateError.noCreditTerm {
-            print("no credit Term")
+        } catch CalculateError.smallPayment {
+            print("payment is not enough to pay percent")
         } catch CalculateError.noMonthlyPayment {
             print("no monthly payment")
         } catch {

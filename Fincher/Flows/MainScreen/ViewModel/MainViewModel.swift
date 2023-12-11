@@ -201,6 +201,9 @@ class MainViewModel {
             percentShare = ostatok * oneHPart
             percentAll += percentShare
             mainShare = paymentSetted - percentShare
+            if mainShare <= 0 {
+                throw CalculateError.smallPayment
+            }
             remains = ostatok - mainShare
             let payment = Payments(
                 number: index,

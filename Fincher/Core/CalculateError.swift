@@ -7,4 +7,5 @@ enum CalculateError: Error {
     case noInterestRate
     case noCreditTerm
     case noMonthlyPayment
+    case smallPayment
 }
