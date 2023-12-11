@@ -9,7 +9,7 @@ class CalculateOptionStackViewBuilder {
         self.viewController = viewController
     }
 
-    let image = UIImage(systemName: "questionmark.app")
+    private let image = UIImage(systemName: "questionmark.app")
 
     lazy var btnCalculationOptionTip: UIButton = {
         let btn = UIButton()
@@ -18,7 +18,7 @@ class CalculateOptionStackViewBuilder {
         return btn
     }()
 
-    let lblCalculationOption: UILabel = {
+    private let lblCalculationOption: UILabel = {
         let lbl = UILabel()
         lbl.text = Strings.shared.calcOptionString
         lbl.textColor = .lightGray

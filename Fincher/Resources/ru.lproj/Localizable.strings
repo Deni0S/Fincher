@@ -15,6 +15,8 @@
 "year" = "лет";
 "month" = "месяцев";
 "Credit Term" = "Срок кредита";
+"Credit Term2" = "Срок кредита (мес)";
 "Interest Rate" = "Процентная ставка";
-"Monthly Payment" = "Ежемесячный платеж";
-"interest charges" = "Начисленные проценты";
+"Monthly Payment" = "Платеж (руб)";
+"Monthly Payment2" = "Ежемесячный платеж";
+"interest charges" = "Проценты (руб)";

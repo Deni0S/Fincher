@@ -363,13 +363,12 @@ class MainViewController: UIViewController {
     private func calculateTermPayments(_ payments: (Int, Double)) {
         if lblAnnuitentPayment == nil,
            lblPercentAll == nil {
-            lblPercentAll = createLabel("\(Strings.shared.creditTermString) \(payments.0)")
-            lblAnnuitentPayment = createLabel("\(Strings.shared.creditTermString) \(payments.0)")
+            lblAnnuitentPayment = createLabel("\(Strings.shared.creditTerm2String) \(payments.0)")
             lblPercentAll = createLabel("\(Strings.shared.interestChargesString) " + String(format: "%.2f", payments.1))
             mainSV.addArrangedSubview(lblAnnuitentPayment!)
             mainSV.addArrangedSubview(lblPercentAll!)
         } else {
-            lblAnnuitentPayment?.text = "\(Strings.shared.creditTermString) \(payments.0)"
+            lblAnnuitentPayment?.text = "\(Strings.shared.creditTerm2String) \(payments.0)"
             lblPercentAll?.text = "\(Strings.shared.interestChargesString) " + String(format: "%.2f", payments.1)
         }
     }

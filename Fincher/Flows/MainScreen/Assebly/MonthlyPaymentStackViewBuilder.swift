@@ -3,11 +3,11 @@ import SnapKit
 import UIKit
 
 class MonthlyPaymentStackViewBuilder {
-    let dropDownButtonBuilder = DropDownButtonBuilder()
+    private let dropDownButtonBuilder = DropDownButtonBuilder()
 
-    let lblMonthlyPayment: UILabel = {
+    private let lblMonthlyPayment: UILabel = {
         let lbl = UILabel()
-        lbl.text = Strings.shared.mPaymentStr
+        lbl.text = Strings.shared.mPayment2String
         lbl.textColor = .lightGray
         return lbl
     }()

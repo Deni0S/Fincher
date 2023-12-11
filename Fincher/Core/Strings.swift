@@ -27,4 +27,8 @@ class Strings {
         "Monthly Payment", bundle: Bundle.main, comment: "Monthly Payment")
     let interestChargesString = NSLocalizedString(
         "interest charges", bundle: Bundle.main, comment: "interest charges")
+    let mPayment2String = NSLocalizedString(
+        "Monthly Payment2", bundle: Bundle.main, comment: "Monthly Payment2")
+    let creditTerm2String = NSLocalizedString(
+        "Credit Term2", bundle: Bundle.main, comment: "Credit Term2")
 }

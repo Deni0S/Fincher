@@ -3,7 +3,7 @@ import SnapKit
 import UIKit
 
 class InterestRateStackViewBuilder {
-    let lblInterestRate: UILabel = {
+    private let lblInterestRate: UILabel = {
         let lbl = UILabel()
         lbl.text = Strings.shared.interestRateString
         lbl.textColor = .lightGray
@@ -25,7 +25,7 @@ class InterestRateStackViewBuilder {
         return textView
     }()
 
-    let lblPercent: UILabel = {
+    private let lblPercent: UILabel = {
         let lbl = UILabel()
         lbl.text = " %"
         lbl.textColor = .lightGray

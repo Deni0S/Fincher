@@ -3,15 +3,15 @@ import Foundation
 import UIKit
 
 class CreditTermStackViewBuilder {
-    var subscriptions = Set<AnyCancellable>()
-    let dropDownButtonBuilder = DropDownButtonBuilder()
+    private var subscriptions = Set<AnyCancellable>()
+    private let dropDownButtonBuilder = DropDownButtonBuilder()
     var viewModel: MainViewModel
 
     init(viewModel: MainViewModel) {
         self.viewModel = viewModel
     }
 
-    let lblCalculationOption: UILabel = {
+    private let lblCalculationOption: UILabel = {
         let lbl = UILabel()
         lbl.text = Strings.shared.creditTermString
         lbl.textColor = .lightGray
