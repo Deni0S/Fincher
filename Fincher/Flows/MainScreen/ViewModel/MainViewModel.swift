@@ -68,13 +68,24 @@ class MainViewModel {
      функция вычисляет платежи по аннуитетной схеме
      - Returns: возвращает сумму выплаченных процентов
      */
-    func calculateAnnuitentPayments() -> Double {
+    func calculateAnnuitentPayments() throws -> Double {
         // сумма выплаченных процентов
         var percentAll: Double = 0.0
         // очищаем календарь
         self.paymentsCalendar = []
+        if amountOfCredit == 0 {
+            throw CalculateError.noAmountOfCredit
+        }
         // остаток основного долга
         var ostatok = Double(amountOfCredit)
+
+        if interestRate == 0.0 {
+            throw CalculateError.noInterestRate
+        }
+
+        if creditTerm == 0 {
+            throw CalculateError.noCreditTerm
+        }
         // сотая часть от месячной процентной ставки
         let oneHPart = self.pTax
         // размер ежемесячного взноса по аннуитетной схеме
@@ -87,7 +98,6 @@ class MainViewModel {
         var remains = 0.0
         // сумма начисленных процентов
         percentAll = 0.0
-
         for index in 1...termInMonth {
             percentShare = ostatok * oneHPart
             percentAll += percentShare
@@ -109,8 +119,17 @@ class MainViewModel {
      Вычисляет платежи по дифференцированной схеме
      - Returns: кортеж с первым и последним платежом и суммой выплаченных процентов
      */
-    func calculateDiffPayments() -> (Double, Double, Double) {
+    func calculateDiffPayments() throws -> (Double, Double, Double) {
         var result: (Double, Double, Double) = (0, 0, 0)
+        if amountOfCredit == 0 {
+            throw CalculateError.noAmountOfCredit
+        }
+        if creditTerm == 0 {
+            throw CalculateError.noCreditTerm
+        }
+        if interestRate == 0.0 {
+            throw CalculateError.noInterestRate
+        }
         // размер ежемесячного взноса по дифференцированной схеме
         let monthlyPamentB = self.monthlyPaymentB
         // сотая часть от месячной процентной ставки
@@ -150,10 +169,19 @@ class MainViewModel {
      Вычисляет срок кредита по дифференцированной схеме
      - Returns: кортеж с сроком кредита в месяцах и начисленные проценты
      */
-    func calculateTermPayments() -> (Int, Double) {
+    func calculateTermPayments() throws -> (Int, Double) {
         var result: (Int, Double) = (0, 0)
         // очищаем календарь
         self.paymentsCalendar = []
+        if amountOfCredit == 0 {
+            throw CalculateError.noAmountOfCredit
+        }
+        if interestRate == 0.0 {
+            throw CalculateError.noInterestRate
+        }
+        if paymentSetted == 0.0 {
+            throw CalculateError.noMonthlyPayment
+        }
         // остаток основного долга
         var ostatok = Double(amountOfCredit)
         // остаток после уплаты части основного долга
@@ -173,6 +201,9 @@ class MainViewModel {
             percentShare = ostatok * oneHPart
             percentAll += percentShare
             mainShare = paymentSetted - percentShare
+            if mainShare <= 0 {
+                throw CalculateError.smallPayment
+            }
             remains = ostatok - mainShare
             let payment = Payments(
                 number: index,
@@ -198,7 +229,7 @@ class MainViewModel {
      Вычисляет срок максимальную сумму кредита по аннуитетной схеме
      - Returns: кортеж с суммой кредита и начисленные проценты
      */
-    func calculateMaxCredit() -> (Double, Double) {
+    func calculateMaxCredit() throws -> (Double, Double) {
         var result: (Double, Double) = (0, 0)
         // очищаем календарь
         paymentsCalendar = []
@@ -206,6 +237,15 @@ class MainViewModel {
         var remains = 0.0
         // сколько идет в погашение процентов
         var percentShare = 0.0
+        if paymentSetted == 0.0 {
+            throw CalculateError.noMonthlyPayment
+        }
+        if creditTerm == 0 {
+            throw CalculateError.noCreditTerm
+        }
+        if interestRate == 0.0 {
+            throw CalculateError.noInterestRate
+        }
         // остаток основного долга
         var ostatok = maxCredit
         result.0 = ostatok

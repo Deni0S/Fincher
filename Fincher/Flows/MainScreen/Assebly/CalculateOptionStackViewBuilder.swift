@@ -9,7 +9,7 @@ class CalculateOptionStackViewBuilder {
         self.viewController = viewController
     }
 
-    let image = UIImage(systemName: "questionmark.app")
+    private let image = UIImage(systemName: "questionmark.app")
 
     lazy var btnCalculationOptionTip: UIButton = {
         let btn = UIButton()
@@ -18,7 +18,7 @@ class CalculateOptionStackViewBuilder {
         return btn
     }()
 
-    let lblCalculationOption: UILabel = {
+    private let lblCalculationOption: UILabel = {
         let lbl = UILabel()
         lbl.text = Strings.shared.calcOptionString
         lbl.textColor = .lightGray
@@ -33,9 +33,7 @@ class CalculateOptionStackViewBuilder {
         [lblCalculationOption,
          btnCalculationOptionTip]
             .forEach { stackView.addArrangedSubview($0) }
-//        self.btnCalculationOptionTip.snp.makeConstraints { make in
-//            make.left.equalTo(self.lblCalculationOption.snp.right).inset(-10)
-//        }
+
         stackView.spacing = UIStackView.spacingUseSystem
         stackView.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20)
         return stackView
