@@ -8,8 +8,8 @@
 
 ![App Screenshot](https://github.com/androidc/Fincher/blob/develop/Screen11.png)
 ![App Screenshot](https://github.com/androidc/Fincher/blob/develop/Screen22.png)
-![App Screenshot](https://github.com/androidc/Fincher/blob/develop/screen33.jpg)
-![App Screenshot](https://github.com/androidc/Fincher/blob/develop/screen44.jpg)
+![App Screenshot](https://github.com/androidc/Fincher/blob/develop/screen333.jpg)
+![App Screenshot](https://github.com/androidc/Fincher/blob/develop/screen444.jpg)
 
 
 ## Описание решения
