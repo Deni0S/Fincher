@@ -301,29 +301,22 @@ class MainViewController: UIViewController {
 
     @objc
     func btnDetailsTap(sender: UIButton) {
-        let assembly = DetailsScreenAssembly()
+        guard selectedCalculationOption == 0 else { return }
         let payments: DetailsScreenViewModel.Payments
-        if selectedCalculationOption == 0 {
-            if selectedTag == 0 {
-                payments = .annuitent(
-                    amount: Double(viewModel.amountOfCredit),
-                    payment: viewModel.monthlyPaymentA,
-                    term: Double(viewModel.termInMonth),
-                    monthRate: viewModel.pTax)
-            } else {
-                payments = .differentiated(
-                    amount: Double(viewModel.amountOfCredit),
-                    payment: viewModel.monthlyPaymentB,
-                    term: Double(viewModel.termInMonth),
-                    monthRate: viewModel.pTax)
-            }
-        } else if selectedCalculationOption == 1 {
-            payments = .term
-        } else if selectedCalculationOption == 2 {
-            payments = .amountMax
+        if selectedTag == 0 {
+            payments = .annuitent(
+                amount: Double(viewModel.amountOfCredit),
+                payment: viewModel.monthlyPaymentA,
+                term: Double(viewModel.termInMonth),
+                monthRate: viewModel.pTax)
         } else {
-            return
+            payments = .differentiated(
+                amount: Double(viewModel.amountOfCredit),
+                payment: viewModel.monthlyPaymentB,
+                term: Double(viewModel.termInMonth),
+                monthRate: viewModel.pTax)
         }
+        let assembly = DetailsScreenAssembly()
         let controller = assembly.assemble(payments)
         controller.modalTransitionStyle = .crossDissolve
         controller.modalPresentationStyle = .fullScreen

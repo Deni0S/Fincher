@@ -1,9 +1,8 @@
 import UIKit
 
 final class DetailsScreenCell: UITableViewCell {
-    private let numberLabel = UILabel()
-    private let amountLabel = UILabel()
     private let dateLabel = UILabel()
+    private let amountLabel = UILabel()
     private let percentLabel = UILabel()
     private let renewalLabel = UILabel()
     private let contribLabel = UILabel()
@@ -24,10 +23,11 @@ final class DetailsScreenCell: UITableViewCell {
         accessoryType = .none
     }
 
-    func configure(_ item: DetailsScreenViewData) {
-        numberLabel.text = item.number
-        amountLabel.text = item.amount
+    func configure(
+        item: DetailsScreenViewData
+    ) {
         dateLabel.text = item.date
+        amountLabel.text = item.amount
         percentLabel.text = item.percent
         renewalLabel.text = item.renewal
         contribLabel.text = item.contrib
@@ -39,7 +39,6 @@ final class DetailsScreenCell: UITableViewCell {
 private extension DetailsScreenCell {
     func setupSubviews() {
         setupLabels([
-            numberLabel,
             amountLabel,
             dateLabel,
             percentLabel,
@@ -49,32 +48,26 @@ private extension DetailsScreenCell {
             overpaymentLabel
         ])
 
-        backgroundColor = .systemBackground
-        addSubview(numberLabel)
+        backgroundColor = .systemGroupedBackground
         let contentStack = contentStack
         addSubview(contentStack)
-
-        numberLabel.translatesAutoresizingMaskIntoConstraints = false
         contentStack.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             contentStack.topAnchor.constraint(equalTo: topAnchor),
             contentStack.bottomAnchor.constraint(equalTo: bottomAnchor),
-            contentStack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: -60),
-            contentStack.trailingAnchor.constraint(equalTo: trailingAnchor),
-            numberLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            numberLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20)
+            contentStack.leadingAnchor.constraint(equalTo: leadingAnchor),
+            contentStack.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
     }
 
     var contentStack: UIStackView {
         vStack([
             hStack([
-                amountLabel,
-                dateLabel]),
+                dateLabel,
+                amountLabel]),
             hStack([
                 percentLabel,
-                renewalLabel,
-                contribLabel]),
+                renewalLabel]),
             hStack([
                 generalLabel,
                 overpaymentLabel])
@@ -83,10 +76,10 @@ private extension DetailsScreenCell {
 
     func setupLabels(_ labels: [UILabel]) {
         labels.forEach { label in
-            label.textColor = .label
+            label.textColor = .darkGray
             label.numberOfLines = 2
             label.textAlignment = .left
-            label.font = .boldSystemFont(ofSize: 12)
+            label.font = .boldSystemFont(ofSize: 14)
         }
     }
 
@@ -94,7 +87,7 @@ private extension DetailsScreenCell {
         let stack = UIStackView()
         stack.distribution = .fillEqually
         stack.alignment = .center
-        stack.spacing = 20
+        stack.spacing = 30
         stack.axis = .horizontal
         views.forEach { stack.addArrangedSubview($0) }
         return stack

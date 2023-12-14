@@ -1,3 +1,4 @@
+import SwiftUI
 import UIKit
 
 final class DetailsScreenViewController: UIViewController {
@@ -6,6 +7,7 @@ final class DetailsScreenViewController: UIViewController {
     }
 
     private let closeButton = UIButton()
+    private let chartsView = UIView()
     private let tableView = UITableView()
     var viewModel: DetailsScreenViewModel?
 
@@ -34,7 +36,7 @@ extension DetailsScreenViewController: UITableViewDataSource, UITableViewDelegat
         else {
             return UITableViewCell()
         }
-        cell.configure(item)
+        cell.configure(item: item)
         return cell
     }
 
@@ -48,47 +50,66 @@ extension DetailsScreenViewController: UITableViewDataSource, UITableViewDelegat
 
 private extension DetailsScreenViewController {
     func setupView() {
+        addCloseButton()
+        addChartView()
         addTableView()
-        setupCloseButton()
     }
 
-    func addTableView() {
-        tableView.backgroundColor = .systemBackground
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(
-            DetailsScreenCell.self,
-            forCellReuseIdentifier: Const.cell.rawValue)
-        view.addSubview(tableView)
-        setupTableViewConstraint()
-    }
-
-    func setupTableViewConstraint() {
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
-    }
-
-    func setupCloseButton() {
+    func addCloseButton() {
         view.addSubview(closeButton)
         closeButton.addTarget(self, action: #selector(closeButtonTap), for: .touchUpInside)
-        closeButton.setTitle("Закрыть", for: .normal)
-        closeButton.backgroundColor = .systemBackground
+        closeButton.setTitle("  Закрыть  ", for: .normal)
+        closeButton.backgroundColor = .systemGroupedBackground
         closeButton.setTitleColor(.label, for: .normal)
-        closeButton.layer.cornerRadius = 8
+        closeButton.layer.cornerRadius = 14
+
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            closeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
-            closeButton.centerXAnchor.constraint(equalTo: tableView.centerXAnchor)
+            closeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            closeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
 
     @objc
     func closeButtonTap() {
         dismiss(animated: true)
+    }
+
+    func addChartView() {
+        view.addSubview(chartsView)
+        chartsView.backgroundColor = .systemGroupedBackground
+
+        chartsView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            chartsView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            chartsView.topAnchor.constraint(equalTo: closeButton.bottomAnchor, constant: 20),
+            chartsView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(300)) { [self] in
+            let childView = UIHostingController(rootView: DetailsChartView(charts: viewModel?.chartData ?? []))
+            addChild(childView)
+            childView.view.frame = chartsView.frame
+            chartsView.addSubview(childView.view)
+            childView.didMove(toParent: self)
+        }
+    }
+
+    func addTableView() {
+        tableView.backgroundColor = .systemGroupedBackground
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(
+            DetailsScreenCell.self,
+            forCellReuseIdentifier: Const.cell.rawValue)
+        view.addSubview(tableView)
+
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 300),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
     }
 }
