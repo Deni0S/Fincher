@@ -10,6 +10,7 @@
 		1BEB5F842B24CF280041C8A0 /* MainViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEB5F832B24CF280041C8A0 /* MainViewController+Ext.swift */; };
 		1BEB5F862B24CFC20041C8A0 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEB5F852B24CFC20041C8A0 /* String+Ext.swift */; };
 		1BEB5F8A2B24F1650041C8A0 /* CalculateError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEB5F892B24F1650041C8A0 /* CalculateError.swift */; };
+		1BEB5F8D2B2DEEFE0041C8A0 /* AlertProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEB5F8C2B2DEEFE0041C8A0 /* AlertProtocol.swift */; };
 		245BDA66D846C5BAC755C3AA /* Pods_FincherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D657E842A100FC60B4DD3071 /* Pods_FincherTests.framework */; };
 		341B85A02B22236300BF99B2 /* DetailsChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B859F2B22236300BF99B2 /* DetailsChartView.swift */; };
 		3463C7452B0F9A30001033B3 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3463C72C2B0F9A30001033B3 /* Strings.swift */; };
@@ -62,6 +63,7 @@
 		1BEB5F832B24CF280041C8A0 /* MainViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Ext.swift"; sourceTree = "<group>"; };
 		1BEB5F852B24CFC20041C8A0 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		1BEB5F892B24F1650041C8A0 /* CalculateError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateError.swift; sourceTree = "<group>"; };
+		1BEB5F8C2B2DEEFE0041C8A0 /* AlertProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertProtocol.swift; sourceTree = "<group>"; };
 		2A6D6232FB7AC4E430DA1A38 /* Pods-Fincher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fincher.debug.xcconfig"; path = "Target Support Files/Pods-Fincher/Pods-Fincher.debug.xcconfig"; sourceTree = "<group>"; };
 		32DB09BD8B4D417652BE1814 /* Pods-FincherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FincherTests.debug.xcconfig"; path = "Target Support Files/Pods-FincherTests/Pods-FincherTests.debug.xcconfig"; sourceTree = "<group>"; };
 		341B859F2B22236300BF99B2 /* DetailsChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsChartView.swift; sourceTree = "<group>"; };
@@ -132,6 +134,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BEB5F8B2B2DEEE30041C8A0 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				1BEB5F8C2B2DEEFE0041C8A0 /* AlertProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		2AEDFFFE180960CC95DAD900 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +207,7 @@
 		3463C73B2B0F9A30001033B3 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				1BEB5F8B2B2DEEE30041C8A0 /* Protocol */,
 				3492596E2B18B78400FEB72D /* Assebly */,
 				34B4733D2B0FD0E200BB9812 /* View */,
 				3492596D2B18B70E00FEB72D /* ViewModel */,
@@ -619,6 +630,7 @@
 				34B473322B0FA1F300BB9812 /* DetailsScreenAssembly.swift in Sources */,
 				3463C7452B0F9A30001033B3 /* Strings.swift in Sources */,
 				3463C7502B0F9A30001033B3 /* MainViewModel.swift in Sources */,
+				1BEB5F8D2B2DEEFE0041C8A0 /* AlertProtocol.swift in Sources */,
 				1BEB5F842B24CF280041C8A0 /* MainViewController+Ext.swift in Sources */,
 				34B473332B0FA1F300BB9812 /* DetailsScreenViewController.swift in Sources */,
 				1BEB5F862B24CFC20041C8A0 /* String+Ext.swift in Sources */,

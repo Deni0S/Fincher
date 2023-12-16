@@ -20,3 +20,12 @@
 "Monthly Payment" = "Monthly Payment";
 "Monthly Payment2" = "Monthly Payment";
 "interest charges" = "interest charges";
+"no amount of credit" = "no amount of credit";
+"error" = "error";
+"Calculate" = "Calculate";
+"Payment schedule" = "Payment schedule";
+"no interest rate" = "no interest rate";
+"no credit Term" = "no credit Term";
+"no monthly payment" = "no monthly payment";
+"payment is not enough to pay percent" = "payment is not enough to pay percent";
+"unknown error" = "unknown error";

@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
             btn.configuration = .filled()
         } else {}
         btn.frame = CGRect(x: 100, y: 100, width: 100, height: 50)
-        btn.setTitle("Рассчитать", for: .normal)
+        btn.setTitle(Strings.shared.calculate, for: .normal)
         return btn
     }()
 
@@ -25,7 +25,7 @@ class MainViewController: UIViewController {
             btn.configuration = .filled()
         } else {}
         btn.frame = CGRect(x: 100, y: 100, width: 100, height: 50)
-        btn.setTitle("График платежей", for: .normal)
+        btn.setTitle(Strings.shared.paymentShedule, for: .normal)
         return btn
     }()
 
@@ -90,7 +90,7 @@ class MainViewController: UIViewController {
         let customSC = UISegmentedControl(items: items)
         customSC.selectedSegmentIndex = 0
         // Style the Segmented Control
-        customSC.layer.cornerRadius = 5.0  // Don't let background bleed
+        customSC.layer.cornerRadius = 5.0
         customSC.backgroundColor = UIColor.black
         customSC.tintColor = UIColor.white
         // Add target action method
@@ -228,13 +228,13 @@ class MainViewController: UIViewController {
         do {
             try calculateAnnuitentPayments(viewModel.calculateAnnuitentPayments())
         } catch CalculateError.noAmountOfCredit {
-            print("no amount of credit")
+            simpleAlert(title: Strings.shared.error, message: Strings.shared.noAmountAlert)
         } catch CalculateError.noInterestRate {
-            print("no interest rate")
+            simpleAlert(title: Strings.shared.error, message: Strings.shared.noInterestRateAlert)
         } catch CalculateError.noCreditTerm {
-            print("no credit Term")
+            simpleAlert(title: Strings.shared.error, message: Strings.shared.noCreditTermAlert)
         } catch {
-            print("unknown error")
+            simpleAlert(title: Strings.shared.error, message: Strings.shared.unknownErrorAlert)
         }
     }
 
@@ -242,13 +242,13 @@ class MainViewController: UIViewController {
         do {
             try calculateDiffPayments(viewModel.calculateDiffPayments())
         } catch CalculateError.noAmountOfCredit {
-            print("no amount of credit")
+            simpleAlert(title: Strings.shared.error, message: Strings.shared.noAmountAlert)
         } catch CalculateError.noInterestRate {
-            print("no interest rate")
+            simpleAlert(title: Strings.shared.error, message: Strings.shared.noInterestRateAlert)
         } catch CalculateError.noCreditTerm {
-            print("no credit Term")
+            simpleAlert(title: Strings.shared.error, message: Strings.shared.noCreditTermAlert)
         } catch {
-            print("unknown error")
+            simpleAlert(title: Strings.shared.error, message: Strings.shared.unknownErrorAlert)
         }
     }
 
@@ -256,15 +256,15 @@ class MainViewController: UIViewController {
         do {
             try calculateTermPayments(viewModel.calculateTermPayments())
         } catch CalculateError.noAmountOfCredit {
-            print("no amount of credit")
+            simpleAlert(title: Strings.shared.error, message: Strings.shared.noAmountAlert)
         } catch CalculateError.noInterestRate {
-            print("no interest rate")
+            simpleAlert(title: Strings.shared.error, message: Strings.shared.noInterestRateAlert)
         } catch CalculateError.smallPayment {
-            print("payment is not enough to pay percent")
+            simpleAlert(title: Strings.shared.error, message: Strings.shared.smallPaymentAlert)
         } catch CalculateError.noMonthlyPayment {
-            print("no monthly payment")
+            simpleAlert(title: Strings.shared.error, message: Strings.shared.noMonthlyPaymentAlert)
         } catch {
-            print("unknown error")
+            simpleAlert(title: Strings.shared.error, message: Strings.shared.unknownErrorAlert)
         }
     }
 
@@ -272,15 +272,15 @@ class MainViewController: UIViewController {
         do {
             try calculateMaxCredit(viewModel.calculateMaxCredit())
         } catch CalculateError.noAmountOfCredit {
-            print("no amount of credit")
+            simpleAlert(title: Strings.shared.error, message: Strings.shared.noAmountAlert)
         } catch CalculateError.noInterestRate {
-            print("no interest rate")
+            simpleAlert(title: Strings.shared.error, message: Strings.shared.noInterestRateAlert)
         } catch CalculateError.noCreditTerm {
-            print("no credit Term")
+            simpleAlert(title: Strings.shared.error, message: Strings.shared.noCreditTermAlert)
         } catch CalculateError.noMonthlyPayment {
-            print("no monthly payment")
+            simpleAlert(title: Strings.shared.error, message: Strings.shared.noMonthlyPaymentAlert)
         } catch {
-            print("unknown error")
+            simpleAlert(title: Strings.shared.error, message: Strings.shared.unknownErrorAlert)
         }
     }
 

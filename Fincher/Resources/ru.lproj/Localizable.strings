@@ -20,3 +20,12 @@
 "Monthly Payment" = "Платеж (руб)";
 "Monthly Payment2" = "Ежемесячный платеж";
 "interest charges" = "Проценты (руб)";
+"no amount of credit" = "Не указана сумма кредита";
+"error" = "ошибка";
+"Calculate" = "Рассчитать";
+"Payment schedule" = "График платежей";
+"no interest rate" = "не указаны проценты";
+"no credit Term" = "не указан срок кредита";
+"no monthly payment" = "не указан месячный платеж";
+"payment is not enough to pay percent" = "первого платежа недостаточно для уплаты процентов";
+"unknown error" = "неизвестная ошибка";
