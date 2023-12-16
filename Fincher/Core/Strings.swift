@@ -31,4 +31,22 @@ class Strings {
         "Monthly Payment2", bundle: Bundle.main, comment: "Monthly Payment2")
     let creditTerm2String = NSLocalizedString(
         "Credit Term2", bundle: Bundle.main, comment: "Credit Term2")
+    let noAmountAlert = NSLocalizedString(
+        "no amount of credit", bundle: Bundle.main, comment: "no amount of credit")
+    let error = NSLocalizedString(
+        "error", bundle: Bundle.main, comment: "error")
+    let calculate = NSLocalizedString(
+        "Calculate", bundle: Bundle.main, comment: "Calculate")
+    let paymentShedule = NSLocalizedString(
+        "Payment schedule", bundle: Bundle.main, comment: "Payment schedule")
+    let noInterestRateAlert = NSLocalizedString(
+        "no interest rate", bundle: Bundle.main, comment: "no interest rate")
+    let noCreditTermAlert = NSLocalizedString(
+        "no credit Term", bundle: Bundle.main, comment: "no credit Term")
+    let noMonthlyPaymentAlert = NSLocalizedString(
+        "no monthly payment", bundle: Bundle.main, comment: "no monthly payment")
+    let smallPaymentAlert = NSLocalizedString(
+        "payment is not enough to pay percent", bundle: Bundle.main, comment: "payment is not enough to pay percent")
+    let unknownErrorAlert = NSLocalizedString(
+        "unknown error", bundle: Bundle.main, comment: "unknown error")
 }
